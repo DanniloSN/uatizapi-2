@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Uatizapi 2",
+    "description": "Maior, melhor só que preto e dourado",
+    "author": "Danilo de Souza",
+    "version": "2.0",
+    "icons": {
+        "400": "src/logo.png"
+    },
+    "web_accessible_resources": [
+        "src/index.js",
+        "src/logo.png",
+        "src/whistle.mp3"
+    ],
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [
+                "https://web.whatsapp.com/",
+                "https://web.whatsapp.com/*"
+            ],
+            "js": [
+                "inject.js"
+            ]
+        }
+    ]
+}
